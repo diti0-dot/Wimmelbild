@@ -6,7 +6,7 @@ import ducks from '../assets/ducks.png';
 import puss from '../assets/puss.png';
 import rapunzel from '../assets/rap.png';
 import xmark from '../assets/xmark.png';
-
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 export default function Play() {
   const navigate = useNavigate();
@@ -68,7 +68,7 @@ export default function Play() {
 
   async function submitScore() {
     try {
-      await fetch("http://localhost:3000/user_create", {
+      await fetch(`${backendUrl}/user_create`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: username, timing: seconds })
@@ -85,7 +85,7 @@ export default function Play() {
     setShowTargetBox(false)
 
     try {
-      const response = await fetch('http://localhost:3000/check_character', {
+      const response = await fetch(`${backendUrl}/check_character`,{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

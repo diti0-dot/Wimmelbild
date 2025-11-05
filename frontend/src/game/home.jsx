@@ -6,6 +6,7 @@ import puss from '../assets/puss.png';
 import rapunzel from '../assets/rap.png';
 import xmark from '../assets/xmark.png';
 import demo from '../assets/demo.gif';
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 
 export default function Home(){
@@ -18,7 +19,7 @@ export default function Home(){
     useEffect(() => {
         async function fetchScores() {
             try {
-                const response = await fetch('http://localhost:3000/user')
+                const response = await fetch(`${backendUrl}/user`)
                 if (!response.ok) {
                     throw new Error('Failed to fetch scores')
                 }
