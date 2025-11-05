@@ -7,8 +7,8 @@ default: &default
 development:
   <<: *default
   database: waldo_dev
-  username: diti      # your WSL/local PostgreSQL username
-  password: Deepthi901       # your WSL/local PostgreSQL password (empty if none)
+  username: diti
+  password: Deepthi901
   host: localhost
 
 test:
@@ -18,13 +18,16 @@ test:
   password: Deepthi901
   host: localhost
 
-
 production: &production
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
 
+# Extra Rails 8 connections
 cable:
   <<: *production
+
 queue:
   <<: *production
 
+cache:
+  <<: *production
