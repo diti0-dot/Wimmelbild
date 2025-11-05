@@ -18,7 +18,11 @@ test:
   password: Deepthi901
   host: localhost
 
+
+
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
   # Neon connection string goes in the environment variable DATABASE_URL
+cable:
+  <<: *production
