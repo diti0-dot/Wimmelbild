@@ -9,4 +9,6 @@ This was a really fun project to make — connecting the frontend to the backend
 
 The app was live for a bit (until my free hosting expired 😅), so now I’ve included a short demo video showing how it works instead.
 
-<video src="frontend/src/assets/ezyZip.mp4" width="320" height="240" controls></video>
+<iframe width="560" height="315" src="https://youtu.be/OMNC4IWBAtM?si=R16bViUUtHwgOoMO" frameborder="0" allowfullscreen></iframe>
+
+
