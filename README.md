@@ -9,3 +9,4 @@ This was a really fun project to make — connecting the frontend to the backend
 
 The app was live for a bit (until my free hosting expired 😅), so now I’ve included a short demo video showing how it works instead.
 
+<video src="" width="320" height="240" controls></video>
